@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  background-color: #222;
+  color: #ddd;
+  font-family: sans-serif;
+}
+
+.container {
+  width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #444;
+  border-radius: 5px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.field {
+  margin-bottom: 10px;
+}
+
+.field label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.field input[type="text"],
+.field input[type="email"] {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #555;
+  border-radius: 3px;
+  background-color: #333;
+  color: #ddd;
+}
+
+.button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #0056b3;
+}
+</style>
+</head>
+<body>
+    
+<div class="container">
+  <h1>Reply</h1>
+
+  <div class="field">
+    <label for="to">To:</label>
+    <input type="email" id="to" value="jeanne@icloud.com" disabled>
+  </div>
+
+  <div class="field">
+    <label for="from">From:</label>
+    <input type="email" id="from" value="peter@reachinbox.com" disabled>
+  </div>
+
+  <div class="field">
+    <label for="subject">Subject:</label>
+    <input type="text" id="subject" value="Warmup Welcome" disabled>
+  </div>
+
+  <textarea placeholder="Hi Jeanne," rows="10" style="width: 100%; padding: 8px; border: 1px solid #555; border-radius: 3px; background-color: #333; color: #ddd;"></textarea>
+
+  <button class="button" style="margin-top: 20px;">Send</button>
+</div>
+</body>
+</html>

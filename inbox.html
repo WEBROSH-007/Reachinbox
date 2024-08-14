@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onebox</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            background-color: #181818;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+
+        .sidebar {
+            width: 60px;
+            height: 100vh;
+            background-color: #282828;
+            position: fixed;
+            top: 0;
+            left: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+        }
+
+        .sidebar a {
+            display: block;
+            width: 40px;
+            height: 40px;
+            margin: 10px 0;
+            border-radius: 50%;
+            background-color: #383838;
+            color: white;
+            text-align: center;
+            line-height: 40px;
+            text-decoration: none;
+        }
+
+        .sidebar a:hover {
+            background-color: #484848;
+        }
+
+        .sidebar a.active {
+            background-color: #585858;
+        }
+
+        .content {
+            padding: 20px;
+            margin-left: 80px;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+        }
+
+        .workspace {
+            display: flex;
+            align-items: center;
+        }
+
+        .workspace .user {
+            margin-right: 10px;
+            color: #888;
+        }
+
+        .workspace .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #282828;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #484848;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: calc(100vh - 60px);
+            text-align: center;
+        }
+
+        .main .envelope {
+            width: 100px;
+            height: 100px;
+            background-color: #585858;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .main .envelope .paper {
+            width: 80px;
+            height: 60px;
+            background-color: #b3d1ff;
+            border-radius: 10px;
+            position: absolute;
+            top: 20px;
+            left: 10px;
+            transform: rotate(-10deg);
+        }
+
+        .main .envelope .paper:after {
+            content: '';
+            width: 0px;
+            height: 0px;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-bottom: 15px solid #b3d1ff;
+            position: absolute;
+            top: 70px;
+            left: 15px;
+        }
+
+        .main .envelope .paper:nth-child(2) {
+            width: 80px;
+            height: 60px;
+            background-color: #b3d1ff;
+            border-radius: 10px;
+            position: absolute;
+            top: 30px;
+            right: 10px;
+            transform: rotate(10deg);
+        }
+
+        .main .envelope .paper:nth-child(2):after {
+            content: '';
+            width: 0px;
+            height: 0px;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-bottom: 15px solid #b3d1ff;
+            position: absolute;
+            top: 70px;
+            right: 15px;
+        }
+
+        .main .title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        .main .subtitle {
+            font-size: 16px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <a href="main.html"><i class="fas fa-home"></i></a>
+        <a href="#"><i class="fas fa-user"></i></a>
+        <a href="inbox.html" class="active"><i class="fas fa-envelope"></i></a>
+        <a href="send.html"><i class="fas fa-paper-plane"></i></a>
+        <a href="mail.html"><i class="fas fa-list"></i></a>
+        <a href="#"><i class="fas fa-cloud"></i><span class="badge">12</span></a>
+        <a href="#"><i class="fas fa-chart-bar"></i></a>
+        <a href="#"><i class="fas fa-cog"></i></a>
+        <a href="index.html"><i class="fas fa-sign-out-alt"></i> </a>
+    </div>
+
+    <div class="content">
+        <div class="header">
+            <div class="logo">Onebox</div>
+            <div class="workspace">
+                <div class="user">Tim's Workspace</div>
+                <div class="dropdown">
+                    <i class="fas fa-sun"></i>
+                    <div class="dropdown-content">
+                        <a href="#">Light Mode</a>
+                        <a href="#">Dark Mode</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main">
+            <div class="envelope">
+                <div class="paper"></div>
+                <div class="paper"></div>
+            </div>
+            <h1 class="title">It's the beginning of a legendary sales pipeline</h1>
+            <p class="subtitle">When you have inbound E-mails, you'll see them here.</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            background-color: #222;
+            color: #ddd;
+            font-family: sans-serif;
+            display: flex;
+        }
+
+        .sidebar {
+            background-color: #333;
+            color: #ddd;
+            width: 60px;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 20px;
+        }
+
+        .sidebar a {
+            color: #ddd;
+            text-decoration: none;
+            display: block;
+            width: 40px;
+            height: 40px;
+            margin-bottom: 20px;
+            text-align: center;
+            line-height: 40px;
+            border-radius: 50%;
+            background-color: #444;
+        }
+
+        .sidebar a:hover {
+            background-color: #555;
+        }
+
+        .sidebar .active {
+            background-color: #007bff;
+            color: #fff;
+        }
+
+        .sidebar .badge {
+            background-color: #e74c3c;
+            color: #fff;
+            font-size: 12px;
+            padding: 2px 6px;
+            border-radius: 12px;
+            position: absolute;
+            top: 5px;
+            right: 5px;
+        }
+
+        .container {
+            margin-left: 80px; /* Adjust to avoid overlap with sidebar */
+            width: calc(100% - 80px);
+            padding: 20px;
+            border: 1px solid #444;
+            border-radius: 5px;
+            background-color: #212121;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .field {
+            margin-bottom: 10px;
+        }
+
+        .field label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .field input[type="text"],
+        .field input[type="email"] {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #555;
+            border-radius: 3px;
+            background-color: #333;
+            color: #ddd;
+        }
+
+        .button {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+        }
+
+        textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #555;
+            border-radius: 3px;
+            background-color: #333;
+            color: #ddd;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <a href="main1.html"><i class="fas fa-arrow-left">prev</i></a>
+
+    </div>
+
+    <div class="container">
+        <h1>Reply</h1>
+
+        <div class="field">
+            <label for="to">To:</label>
+            <input type="email" id="to" value="jeanne@icloud.com" disabled>
+        </div>
+
+        <div class="field">
+            <label for="from">From:</label>
+            <input type="email" id="from" value="peter@reachinbox.com" disabled>
+        </div>
+
+        <div class="field">
+            <label for="subject">Subject:</label>
+            <input type="text" id="subject" value="Warmup Welcome" disabled>
+        </div>
+
+        <textarea placeholder="Hi Jeanne," rows="10"></textarea>
+
+        <button class="button" style="margin-top: 20px;">Send</button>
+    </div>
+</body>
+</html>

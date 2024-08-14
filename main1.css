@@ -1,0 +1,96 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #181818; /* Set a background color for the whole page */
+}
+
+.sidebar {
+    background-color: #222;
+    color: #fff;
+    width: 60px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    z-index: 1000; /* Ensure sidebar is above other content */
+}
+
+.logo {
+    padding: 20px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 30px;
+}
+
+.sidebar li {
+    margin-bottom: 20px;
+}
+
+.sidebar li a {
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+}
+
+.sidebar li a i {
+    margin-right: 10px;
+}
+
+.content {
+    margin-left: 60px;
+    padding: 20px;
+    background-color: #f0f0f0;
+    min-height: 100vh; /* Ensure content area covers the viewport height */
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.title {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.workspace {
+    display: flex;
+    align-items: center;
+}
+
+.workspace i {
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+.hero {
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+.hero img {
+    width: 100px;
+    height: 100px;
+}
+
+.hero h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 18px;
+}
